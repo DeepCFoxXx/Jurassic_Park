@@ -13,4 +13,8 @@ describe("Dinosaur", function() {
     assert.strictEqual(plesiosaur.type, "plesiosaur");
   });
 
+  it('should have a number of offspring per year', function() {
+    assert.strictEqual(plesiosaur.annualOffspring, 2);
+  });
+
 });
