@@ -50,4 +50,9 @@ describe('Park', function() {
     assert.strictEqual(park.dinosaursWithOffSpringMoreThan(2).length, 2);
   });
 
+  it('should be able to calculate number of dinosaurs after 1 year', function(){
+    park.addDinosaur(velociraptor1);
+    assert.strictEqual(park.calculateDinosaurs(1), 4);
+  });
+
 });

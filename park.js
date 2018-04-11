@@ -26,4 +26,16 @@ Park.prototype.dinosaursWithOffSpringMoreThan = function (amount) {
   return foundDinosaurs;
 }
 
+Park.prototype.calculateDinosaurs = function (years) {
+  var total = 0;
+  for (dinosaur of this.enclosure) {
+    var count = 1;
+    for (var i = 0; i < years; i++) {
+      count += dinosaur.annualOffspring * count;
+    }
+    total += count;
+  }
+  return total;
+}
+
 module.exports = Park;
