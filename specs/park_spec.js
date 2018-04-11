@@ -32,4 +32,15 @@ describe('Park', function() {
     assert.strictEqual(park.enclosure.length, 1);
   });
 
+  it('should be able to remove all dinosaurs by type', function(){
+    park.addDinosaur(plesiosaur);
+    park.addDinosaur(dilophosaurus);
+    park.addDinosaur(velociraptor1);
+    park.addDinosaur(velociraptor2);
+    park.addDinosaur(velociraptor3);
+    park.addDinosaur(velociraptor4);
+    park.removeDinosaurByType("velociraptor");
+    assert.strictEqual(park.enclosure.length, 2);
+  });
+
 });
