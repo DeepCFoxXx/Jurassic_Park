@@ -43,4 +43,11 @@ describe('Park', function() {
     assert.strictEqual(park.enclosure.length, 2);
   });
 
+  it('should get all the dinosaurs with an average offspring count of more than 2', function(){
+    park.addDinosaur(dilophosaurus);
+    park.addDinosaur(velociraptor1);
+    park.addDinosaur(velociraptor2);
+    assert.strictEqual(park.dinosaursWithOffSpringMoreThan(2).length, 2);
+  });
+
 });
